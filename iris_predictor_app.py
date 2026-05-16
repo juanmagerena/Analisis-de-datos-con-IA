@@ -25,8 +25,8 @@ def load_resources():
             st.stop()
     
     try:
-        model = joblib.load('best_knn_model.pkl')
-        label_encoder = joblib.load('label_encoder_iris_species.pkl')
+        model = 'best_knn_model.pkl'
+        label_encoder = 'label_encoder_iris_species.pkl'
     except FileNotFoundError as e:
         st.error(f"Model or label encoder files not found: {e}. Make sure 'best_knn_model.pkl' and 'label_encoder_iris_species.pkl' are in {expected_dir}.")
         st.stop()
